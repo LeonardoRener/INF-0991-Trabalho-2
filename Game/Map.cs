@@ -54,11 +54,11 @@ public class Map
         }
     }
 
-    public List<Jawel> CollectJawel(Coordinate coordinate)
+    public List<Jawel> CollectJawel()
     {
         List<Jawel> collected = new List<Jawel>();
-        int x = coordinate.getX();
-        int y = coordinate.getY();
+        int x = robot.GetCoordinate().getX();
+        int y = robot.GetCoordinate().getY();
 
         if (items[x-1,y] is Jawel jawel1)
         {

@@ -48,7 +48,7 @@ public class Robot : Item
 
     public void Collect()
     {
-        List<Jawel>? collected = map?.CollectJawel(this.coordinate);
+        List<Jawel>? collected = map?.CollectJawel();
 
         if(collected != null && collected.Count > 0)
             this.bag.AddRange(collected);
