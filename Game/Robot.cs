@@ -56,7 +56,12 @@ public class Robot : Item
 
     public void PrintState()
     {
+        int value = 0;
+        foreach (Jawel jawel in bag) {
+            value += jawel.getValue();
+        }
 
+        System.Console.WriteLine("Bag total items: {0} | Bag total value: {1}", bag.Count, value);
     }
 
     public String getStringMap()
