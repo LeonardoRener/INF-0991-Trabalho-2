@@ -19,8 +19,17 @@ public class Coordinate
         return this.pos_y;
     }
 
-    private bool Compare(int x, int y)
+    public override bool Equals(Object? obj)
     {
-        return this.pos_x == x && this.pos_y == y;
+        if (obj is Coordinate coord)
+            if (this.pos_x == coord.getX() && this.pos_y == coord.getY())
+                return true;
+
+        return false;
+    }
+
+    public override int GetHashCode()
+    {
+        return (this.pos_x << 2) ^ this.pos_y;
     }
 }
